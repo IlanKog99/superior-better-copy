@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Superior Better Copy
 
 A powerful Windows application for automated text typing with special command support and clipboard integration.
