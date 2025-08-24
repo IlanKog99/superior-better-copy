@@ -79,6 +79,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Version
 
 Current version: v0.2.4
-=======
-temp
->>>>>>> d02afb2d6b21d5fe086028d98e1f826902cce88a
