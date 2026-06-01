@@ -45,8 +45,10 @@ Use these inside square brackets within your text:
 ```powershell
 cd python-script
 pip install -r requirements.txt
-python "Superior Better Copy.py"
+pythonw "Superior Better Copy.pyw"
 ```
+> The `.pyw` extension runs the app with `pythonw` so **no terminal window** appears.
+> You can also just double-click `Superior Better Copy.pyw`.
 
 ### Hotkeys
 - **Ctrl+F7** — start typing from clipboard content
