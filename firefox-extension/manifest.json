@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Superior Better Copy — Web Typer",
+  "short_name": "SBC Typer",
+  "version": "0.1.0",
+  "description": "Pick any text field on a page with a crosshair, then have your text typed into it with 100% accuracy at a configurable speed.",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "superior-better-copy@local",
+      "strict_min_version": "115.0"
+    }
+  },
+
+  "permissions": ["activeTab", "storage", "scripting", "clipboardRead"],
+
+  "action": {
+    "default_title": "Superior Better Copy — Web Typer",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon.svg",
+      "32": "icons/icon.svg",
+      "48": "icons/icon.svg",
+      "128": "icons/icon.svg"
+    }
+  },
+
+  "icons": {
+    "48": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

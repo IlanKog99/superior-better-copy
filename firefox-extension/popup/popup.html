@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>Superior Better Copy</title>
+</head>
+<body>
+  <header class="bar">
+    <span class="reticle" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <line x1="12" y1="1.5" x2="12" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="12" y1="18" x2="12" y2="22.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="1.5" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="18" y1="12" x2="22.5" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="1.6" fill="currentColor"/>
+      </svg>
+    </span>
+    <h1>Superior <em>Better</em> Copy</h1>
+  </header>
+
+  <main>
+    <label class="field-label" for="text">Text to type</label>
+    <input id="text" type="text" autocomplete="off" spellcheck="false"
+           placeholder="A word or a single line…" />
+
+    <label class="toggle autostart">
+      <input type="checkbox" id="autoStart" />
+      <span>Auto-start after fill</span>
+    </label>
+
+    <button id="fill" class="secondary" type="button" title="Paste clipboard into the box">
+      <svg class="mdi" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path fill="currentColor" d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z" />
+      </svg>
+      Fill from clipboard
+    </button>
+
+    <div class="controls">
+      <div class="row">
+        <label for="enter">Press Enter</label>
+        <select id="enter">
+          <option value="none">None</option>
+          <option value="before">Before</option>
+          <option value="after">After</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+
+      <label class="toggle">
+        <input type="checkbox" id="selectAll" />
+        <span>Select all first <em>(Ctrl + A)</em></span>
+      </label>
+    </div>
+
+    <button id="pick" class="primary">
+      <svg class="cross" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Pick a target &amp; type
+    </button>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <footer>
+    <span class="hint">Click the button, then click any text field or VM console. Clicks won’t trigger the page while the crosshair is active.</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
